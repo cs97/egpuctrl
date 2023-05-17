@@ -59,7 +59,7 @@ print_usage(){
 	echo -e "\t--info\t\tprint SCLK,MCLK,VDDC_CURVE"
 	echo -e "\t--set-target\tset max 1900MHz max 1001mV"
 	echo -e "\t--reset\t\treset SCLK,MCLK,VDDC_CURVE"
-	echo -e "\t--reset-amdgpu\trestart amdgpu driver for eGPU"
+	echo -e "\t--restart-amdgpu\trestart amdgpu driver for eGPU"
 }
 
 case $1 in
