@@ -24,25 +24,17 @@ path="/sys/class/drm/card1/device"
 #		2: 1900MHz 1001mV
 
 
-# voltage curve max number
-vc_1="1"
-vc_2="2"
-
-# max voltage in mV
-voltage_1="806"
-voltage_2="1001"
-
-# max frequency in MHz
-frequency_1="1417"
-frequency_2="1900"
+# OD_VDDC_CURVE:
+vc_1="1 1417 806"
+vc_2="2 1900 1001"
 
 
 
 # set the power of the GPU performance target
 performance_target(){
-	echo "vc $vc_1 $frequency_1 $voltage_1" > /sys/class/drm/card1/device/pp_od_clk_voltage
-	echo "vc $vc_2 $frequency_2 $voltage_2" > /sys/class/drm/card1/device/pp_od_clk_voltage
-	echo "s 1 $frequency_2" > /sys/class/drm/card1/device/pp_od_clk_voltage
+	echo "vc $vc_1" > /sys/class/drm/card1/device/pp_od_clk_voltage
+	echo "vc $vc_2" > /sys/class/drm/card1/device/pp_od_clk_voltage
+	echo "s 1 $(echo $vc_2 | awk '{print $2}')" > /sys/class/drm/card1/device/pp_od_clk_voltage
 	echo "c" > /sys/class/drm/card1/device/pp_od_clk_voltage
 }
 
