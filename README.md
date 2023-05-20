@@ -1,7 +1,7 @@
 
 
 
-
+### my rx 5700 xt VDDC_CURVE
 ```
 # my rx 5700 xt VDDC_CURVE
 
@@ -18,3 +18,11 @@ OD_VDDC_CURVE:
 2: 1900MHz 1001mV
 ```
 
+
+### good OD_VDDC_CURVE example:
+```
+good OD_VDDC_CURVE example:
+1700MHz 875mV
+1900MHz 1001mV
+2000MHz 1085mV
+```
