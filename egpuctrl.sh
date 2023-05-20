@@ -7,6 +7,8 @@ path="/sys/class/drm/card1/device"
 
 #	you have to change the variables if you have a different gpu
 
+#	VDDC Curve for rx 5700 xt:
+
 # OD_VDDC_CURVE:
 vc_1="1 1417 806"
 vc_2="2 1900 1001"
