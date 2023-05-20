@@ -23,3 +23,13 @@ OD_VDDC_CURVE:
 1900MHz 1001mV
 2000MHz 1085mV
 ```
+
+### auto sclk & mclk clock
+```
+echo "auto" > /sys/class/drm/card1/device/power_dpm_force_performance_level 
+```
+
+### max sclk & mclk clock
+```
+echo "profile_peak" > /sys/class/drm/card1/device/power_dpm_force_performance_level 
+```
