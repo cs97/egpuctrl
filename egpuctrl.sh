@@ -15,10 +15,10 @@ vc_2="2 1900 1001"
 
 # set the power of the GPU performance target
 performance_target(){
-	echo "vc $vc_1" > /sys/class/drm/card1/device/pp_od_clk_voltage
-	echo "vc $vc_2" > /sys/class/drm/card1/device/pp_od_clk_voltage
-	echo "s 1 $(echo $vc_2 | awk '{print $2}')" > /sys/class/drm/card1/device/pp_od_clk_voltage
-	echo "c" > /sys/class/drm/card1/device/pp_od_clk_voltage
+	echo "vc $vc_1" > $path/pp_od_clk_voltage
+	echo "vc $vc_2" > $path/pp_od_clk_voltage
+	echo "s 1 $(echo $vc_2 | awk '{print $2}')" > $path/pp_od_clk_voltage
+	echo "c" > $path/pp_od_clk_voltage
 }
 
 # restart amdgpu driver
