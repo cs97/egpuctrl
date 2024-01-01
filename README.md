@@ -40,3 +40,6 @@ echo "profile_peak" > /sys/class/drm/card1/device/power_dpm_force_performance_le
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="... amdgpu.ppfeaturemask=0xffffffff"
 ```
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
