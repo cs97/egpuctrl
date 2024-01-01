@@ -34,3 +34,9 @@ echo "auto" > /sys/class/drm/card1/device/power_dpm_force_performance_level
 ```
 echo "profile_peak" > /sys/class/drm/card1/device/power_dpm_force_performance_level 
 ```
+
+### AMD GPU OC UV...
+/etc/default/grub
+```
+GRUB_CMDLINE_LINUX_DEFAULT="... amdgpu.ppfeaturemask=0xffffffff"
+```
